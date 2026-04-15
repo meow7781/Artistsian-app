@@ -1,66 +1,47 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
+    <main>
+      <section className="hero fade-in">
+        <div className="hero-content">
+          <span className="badge">Hyper-Local Immersive E-Commerce</span>
+          <h1>Experience Bengal's Heritage Direct From The Artisan</h1>
           <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
+            Connect with rural weavers and potters globally. Discover 360° origin stories, 
+            virtually try on traditional wear with AR, and converse live in English through real-time translation.
           </p>
+          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
+            <Link href="/shop" className="btn btn-primary">
+              Explore The Experience Store
+            </Link>
+            <Link href="/artisans" className="btn btn-outline">
+              Meet The Artisans
+            </Link>
+          </div>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <section className="container py-16 text-center">
+        <h2 style={{ marginBottom: '3rem' }}>How Sanskriti-Flow Connects You</h2>
+        <div className="grid grid-cols-3">
+          <div className="card" style={{ padding: '2rem' }}>
+            <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>🎬</div>
+            <h3>360° Origin Stories</h3>
+            <p className="text-muted mt-4">Scan a product and be instantly transported to the artisan's village through immersive WebGL environments.</p>
+          </div>
+          <div className="card" style={{ padding: '2rem' }}>
+            <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>🥽</div>
+            <h3>AR Try-On</h3>
+            <p className="text-muted mt-4">Virtually try on Baluchari sarees or place Terracotta decor in your home before purchasing.</p>
+          </div>
+          <div className="card" style={{ padding: '2rem' }}>
+            <div style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>🗣️</div>
+            <h3>Live Translation</h3>
+            <p className="text-muted mt-4">Break language barriers. Video-chat with a weaver in Phulia while AI translates Bengali to English in real-time.</p>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+    </main>
   );
 }
