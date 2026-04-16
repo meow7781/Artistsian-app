@@ -1,0 +1,26 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="180" height="180" rx="40" fill="#0d0d0d"/>
+  
+  <!-- Gold gradient circle -->
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4af37;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b8941e;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <circle cx="90" cy="90" r="75" fill="none" stroke="url(#goldGradient)" stroke-width="3"/>
+  
+  <!-- Decorative ornaments -->
+  <circle cx="90" cy="50" r="4" fill="#d4af37"/>
+  <circle cx="90" cy="130" r="4" fill="#d4af37"/>
+  <circle cx="50" cy="90" r="4" fill="#d4af37"/>
+  <circle cx="130" cy="90" r="4" fill="#d4af37"/>
+  
+  <!-- S letter in gold with serif style -->
+  <text x="90" y="115" font-family="Playfair Display, serif" font-size="80" font-weight="700" fill="#d4af37" text-anchor="middle" letter-spacing="-2">S</text>
+  
+  <!-- Decorative underline -->
+  <line x1="60" y1="135" x2="120" y2="135" stroke="#d4af37" stroke-width="2" opacity="0.6"/>
+</svg>

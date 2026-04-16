@@ -14,9 +14,21 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Sanskriti-Flow | Rural Artisans Experience Store",
+  title: "Sanskriti-Flow | Experience Handmade Culture",
   description:
-    "Connect with Bengal's rural artisans through immersive storytelling, AR try-ons, and real-time live translation.",
+    "Connect with Bengal's rural artisans through immersive storytelling, real-time translation, and authentic handcrafted products.",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/icon.svg", sizes: "192x192", type: "image/svg+xml" },
+    ],
+    apple: "/apple-icon.png",
+  },
+  openGraph: {
+    title: "Sanskriti-Flow | Experience Handmade Culture",
+    description: "Connect with Bengal's rural artisans through immersive storytelling and authentic handcrafted products.",
+    images: [{ url: "/icon.svg" }],
+  },
 };
 
 export default function RootLayout({
@@ -30,43 +42,64 @@ export default function RootLayout({
         <header className="site-header">
           <nav className="nav container fade-in">
             <Link href="/" className="logo">
-              Sanskriti-Flow
+              ✨ Sanskriti-Flow
             </Link>
             <div className="nav-links">
-              <Link href="/">Home</Link>
-              <Link href="/sign-in">Sign In</Link>
-              <Link href="/sign-up" className="nav-cta">
-                Sign Up
+              <Link href="/explore">Explore</Link>
+              <Link href="/chat">Chat</Link>
+              <Link href="/checkout" className="nav-cta">
+                Cart
               </Link>
             </div>
           </nav>
         </header>
-        {children}
+
+        <main className="content-wrapper">
+          {children}
+        </main>
+
         <footer className="site-footer">
           <div className="container footer-grid">
             <div>
               <Link href="/" className="logo">
-                Sanskriti-Flow
+                ✨ Sanskriti-Flow
               </Link>
-              <p className="text-muted footer-copy">
-                A digital bridge between Bengal&apos;s artisans and global buyers seeking craft with
-                story, provenance, and care.
+              <p className="footer-copy">
+                Supporting rural artisans through direct sales and authentic storytelling. Every purchase directly
+                empowers makers and preserves cultural heritage.
               </p>
             </div>
-
-            <div className="footer-links">
-              <span className="footer-title">Explore</span>
-              <Link href="/">Landing Page</Link>
-              <Link href="/sign-in">Sign In</Link>
-              <Link href="/sign-up">Sign Up</Link>
+            <div className="footer-section">
+              <h4>Shop</h4>
+              <div className="footer-links">
+                <Link href="/explore">All Products</Link>
+                <Link href="/explore">Sarees</Link>
+                <Link href="/explore">Pottery</Link>
+                <Link href="/explore">Handmade</Link>
+              </div>
             </div>
-
-            <div className="footer-links">
-              <span className="footer-title">Contact</span>
-              <a href="mailto:hello@sanskritiflow.com">hello@sanskritiflow.com</a>
-              <span>Kolkata, India</span>
-              <span>Craft stories, digitally shared</span>
+            <div className="footer-section">
+              <h4>About</h4>
+              <div className="footer-links">
+                <Link href="#">Our Story</Link>
+                <Link href="#">Artisans</Link>
+                <Link href="#">Blog</Link>
+                <Link href="#">Sustainability</Link>
+              </div>
             </div>
+            <div className="footer-section">
+              <h4>Support</h4>
+              <div className="footer-links">
+                <Link href="#">Contact</Link>
+                <Link href="#">FAQ</Link>
+                <Link href="#">Shipping</Link>
+                <Link href="#">Returns</Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="footer-bottom">
+            <p>&copy; {new Date().getFullYear()} Sanskriti-Flow. All rights reserved. | Empowering artisans, preserving culture.</p>
           </div>
         </footer>
       </body>
